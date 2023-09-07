@@ -1,10 +1,12 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+
+// variables
 const date = new Date();
 const currentDay = document.getElementById("currentDay");
 const currentHour = dayjs().format('HH');
-const ids = [
+const scheduleTime = [
   'hour-9', 
   'hour-10', 
   'hour-11', 
@@ -15,6 +17,8 @@ const ids = [
   'hour-16', 
   'hour-17'];
 
+const saveButton = document.getElementById("saveButton");
+
 currentDay.innerHTML = date;
 
 // Compare time function
@@ -23,9 +27,9 @@ $(function() {
 });
 
 function compareTime() {
-  for (let i = 0; i < ids.length; i++) {
+  for (let i = 0; i < scheduleTime.length; i++) {
     // Retrieve html element by id
-    const element = document.getElementById(ids[i]);
+    const element = document.getElementById(scheduleTime[i]);
     // Hour value from element id
     const hourValue = parseInt(element.id.split('-')[1]);
 
@@ -49,6 +53,13 @@ function compareTime() {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
+  $(function() {
+    saveText()
+  });
+
+  function saveText() {
+
+  }
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
