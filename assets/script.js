@@ -6,6 +6,9 @@
 const date = new Date();
 const currentDay = document.getElementById("currentDay");
 const currentHour = dayjs().format('HH');
+currentDay.innerHTML = date;
+
+// Arrays
 const scheduleTime = [
   'hour-9', 
   'hour-10', 
@@ -15,11 +18,32 @@ const scheduleTime = [
   'hour-14', 
   'hour-15', 
   'hour-16', 
-  'hour-17'];
+  'hour-17'
+];
 
-const saveButton = document.getElementById("saveButton");
+const saveButton = [
+  'saveButton1',
+  'saveButton2',
+  'saveButton3',
+  'saveButton4',
+  'saveButton5',
+  'saveButton6',
+  'saveButton7',
+  'saveButton8',
+  'saveButton9',
+];
 
-currentDay.innerHTML = date;
+const userText = [
+  'userText1',
+  'userText2',
+  'userText3',
+  'userText4',
+  'userText5',
+  'userText6',
+  'userText7',
+  'userText8',
+  'userText9',
+];
 
 // Compare time function
 $(function() {
