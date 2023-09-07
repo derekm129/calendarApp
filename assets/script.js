@@ -77,12 +77,20 @@ function compareTime() {
   // function? How can DOM traversal be used to get the "hour-x" id of the
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
+  
+  saveButton.forEach((buttonId) => {
+    const  button = document.getElementById(buttonId);
+    button.addEventListener('click', saveText);
+  });
+  
   $(function() {
     saveText()
   });
 
   function saveText() {
-
+    const textContent = userText.textContent;
+    userText.textContent = localStorage.setItem("UserText", textContent);
+    console.log("saved text");
   }
 
   // TODO: Add code to get any user input that was saved in localStorage and set
@@ -90,4 +98,3 @@ function compareTime() {
   // attribute of each time-block be used to do this?
  
 
-compareTime();
