@@ -58,6 +58,7 @@ function compareTime() {
      } 
     }));
  
+  // Save user input  
   function saveText(textNumber) {
     console.log(textNumber);
     const textBlock = document.getElementById("userText" + textNumber)
@@ -66,6 +67,7 @@ function compareTime() {
     // console.log("saved text", userEvent);
   }
 
+  // Get saved user input
 function savedSchedule() {
   for (let i = 1; i < 10; i++) {
   const retrievedEvent = localStorage.getItem(`userText${i}`);
