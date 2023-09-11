@@ -17,6 +17,8 @@ This website is for creating schedules.
 
 ![Scheduler](./assets/Images/scheduleScreenshot.png)
 
+https://derekm129.github.io/calendarApp/
+
 ## Credits
 
 N/A
