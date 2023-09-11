@@ -1,15 +1,26 @@
-# calendarApp
+# Scheduler
 
-<!-- GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with time blocks for standard business hours of 9am to 5pm
-WHEN I view the time blocks for that day
-THEN each time block is color-coded to indicate whether it is in the past, present, or future -->
-WHEN I click into a time block
-THEN I can enter an event
-WHEN I click the save button for that time block
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
+## Description
+
+- The purpose of this project was to make a schedule that saves events a user creates.
+- I built this project in order to make JavaScript code that would make a scheduler app that is functionable.
+- The  project solves the problem of making a scheduling app that can actually save events that a user writes into it.
+- I learned how to properly use localStorage.setItem and localStorage.getItem.
+
+## Installation
+
+N/A
+
+## Usage
+
+This website is for creating schedules.
+
+![Scheduler](./assets/Images/scheduleScreenshot.png)
+
+## Credits
+
+N/A
+
+## License
+
+Please refer to the license in the repo.
