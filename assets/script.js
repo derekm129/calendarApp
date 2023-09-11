@@ -6,7 +6,9 @@
 const date = new Date();
 const currentDay = document.getElementById("currentDay");
 const currentHour = dayjs().format('HH');
+const dataHour = document.querySelector(".time-block");
 currentDay.innerHTML = date;
+let userInput = "";
 
 // Arrays
 const scheduleTime = [
@@ -21,29 +23,29 @@ const scheduleTime = [
   'hour-17'
 ];
 
-const saveButton = [
-  'saveButton1',
-  'saveButton2',
-  'saveButton3',
-  'saveButton4',
-  'saveButton5',
-  'saveButton6',
-  'saveButton7',
-  'saveButton8',
-  'saveButton9',
-];
+// const saveButton = [
+//   'saveButton1',
+//   'saveButton2',
+//   'saveButton3',
+//   'saveButton4',
+//   'saveButton5',
+//   'saveButton6',
+//   'saveButton7',
+//   'saveButton8',
+//   'saveButton9',
+// ];
 
-const userText = [
-  'userText1',
-  'userText2',
-  'userText3',
-  'userText4',
-  'userText5',
-  'userText6',
-  'userText7',
-  'userText8',
-  'userText9',
-];
+// const userText = [
+//   'userText1',
+//   'userText2',
+//   'userText3',
+//   'userText4',
+//   'userText5',
+//   'userText6',
+//   'userText7',
+//   'userText8',
+//   'userText9',
+// ];
 
 // Compare time function
 $(function() {
@@ -78,23 +80,42 @@ function compareTime() {
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
   
-  saveButton.forEach((buttonId) => {
-    const  button = document.getElementById(buttonId);
-    button.addEventListener('click', saveText);
-  });
+  // Event listener
+  $(document.body.addEventListener('click', function(event) {
+    
+    if (event.target.matches('.saveBtn')) {
+      // Save schedule text with hour
+        
+      event.target.getAttribute('id');
+      var buttonNumber = event.target.getAttribute('id').substr(-1);
+      console.log(buttonNumber.substr(-1))
+      // console.log(event.target.getAttribute('id').toString()[-1]);
+      // Get parent element
+        // const hour = event.parentElement.getAttribute("dataHour");
+        // const text = event.parentElement.querySelector("text-area").value;
+        // console.log("hour", hour);
+        // console.log("text", text);
+        saveText(buttonNumber);
+        
+     } 
+    }));
+ 
   
-  $(function() {
-    saveText()
-  });
-
-  function saveText() {
-    const textContent = userText.textContent;
-    userText.textContent = localStorage.setItem("UserText", textContent);
-    console.log("saved text");
+  
+  function saveText(textNumber) {
+    // const userEvent = userText.textContent;
+    console.log(textNumber);
+    const textBlock = document.getElementById("userText" + textNumber)
+    console.log(textBlock.value);
+    localStorage.setItem("userText" + textNumber, textBlock.value);
+    // console.log("saved text", userEvent);
   }
 
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
  
-
+  // const retrievedStringifiedArray = localStorage.getItem('myArrayKey');
+  // const retrievedArray = JSON.parse(retrievedStringifiedArray);
+  
+// When page loads get value from local storage and update schedule
