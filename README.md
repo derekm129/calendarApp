@@ -13,7 +13,7 @@ N/A
 
 ## Usage
 
-This website is for creating schedules.
+This website is used for scheduling a work day.
 
 ![Scheduler](./assets/Images/scheduleScreenshot.png)
 
