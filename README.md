@@ -2,18 +2,18 @@
 
 ## Description
 
-- The purpose of this project was to make a schedule that saves events a user creates.
-- I built this project in order to make JavaScript code that would make a scheduler app that is functionable.
-- The  project solves the problem of making a scheduling app that can actually save events that a user writes into it.
-- I learned how to properly use localStorage.setItem and localStorage.getItem.
+- This project was designed to be a functional scheduler application, enabling users to create and save events.
+The primary objective was to develop JavaScript code that effectively supports event scheduling and data persistence.
+This scheduler solves the challenge of building a reliable scheduling tool with the capability to retain user-inputted events.
+In the process of creating this application, I learned how to use'localStorage.setItem' and 'localStorage.getItem'.
 
 ## Installation
 
-N/A
+- No installation is required for this project
 
 ## Usage
 
-This website is used for scheduling a work day.
+- This application is used for scheduling and organizing daily work tasks.
 
 ![Scheduler](./assets/Images/scheduleScreenshot.png)
 
